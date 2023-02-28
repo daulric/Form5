@@ -5,7 +5,7 @@ var
     parishes : array [1..7] of string;
     vaccinated : array [1..7] of integer;
     unvaccinated : array [1..7] of integer;
-    positive_case : array [1..7] of integer;
+    positive_cases : array [1..7] of integer;
     total_vaccinated : integer;
     total_unvaccinated : integer;
     uk : integer;
@@ -26,5 +26,18 @@ begin
     readln;
     writeln('This program will be used to find out the highest number of  vaccinated persons in Grenada');
     readln;
+
+    for uk := 1 to 7 do begin
+        // Input the current data for each parish
+
+        write('Enter the Name of the Parish: ');
+        readln(parishes[uk]);
+        write('Enter The Number of Vaccinated Persons: ');
+        readln(vaccinated[uk]);
+        write('Tell Me The Number of Unvaccinated Persons: ');
+        readln(unvaccinated[uk]);
+        write('State The Number of Positive Cases: ');
+        readln(positive_cases[uk]);
+    end;
 
 end.
