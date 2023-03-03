@@ -8,6 +8,7 @@ var
     positive_cases : array [1..7] of integer;
     total_vaccinated : integer;
     total_unvaccinated : integer;
+    total_positive_cases : integer;
     uk : integer;
     highestPositiveIndex : integer;
 
@@ -38,6 +39,31 @@ begin
         readln(unvaccinated[uk]);
         write('State The Number of Positive Cases: ');
         readln(positive_cases[uk]);
+        
     end;
+
+    // the program will calculate the total number of vaccinated persons, total number of unvacccinated persons and total number of positive cases
+    total_vaccinated := 0;
+    total_unvaccinated := 0;
+    total_positive_cases := 0;
+
+    for uk := 1 to 7 do begin
+        total_vaccinated := total_vaccinated + vaccinated[uk];
+        total_unvaccinated := total_unvaccinated + unvaccinated[uk];
+        total_positive_cases := total_positive_cases + positive_cases[uk];
+    end;
+
+    writeln('Thank You For Entering Data Needed!');
+    readln;
+    writeln('The program is going to display following information!');
+    readln;
+
+    writeln('The Total Vaccinated Persons are ', total_vaccinated);
+    readln;
+    writeln('The Total Unvaccinated Persons are: ', total_unvaccinated);
+    readln;
+    writeln('The Total Positive Cases are: ', total_positive_cases);
+    readln;
+
 
 end.
