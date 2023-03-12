@@ -1,0 +1,91 @@
+program Parish_vote_Delona_Zoye;
+
+var
+
+    parishes : array [1..7] of string;
+
+    vaccinated : array [1..7] of integer;
+
+    unvaccinated : array [1..7] of integer;
+
+    positive_case : array [1..7] of integer;
+
+    total_vaccinated : integer;
+
+    total_unvaccinated : integer; 
+
+    total_positive_cases : integer;
+
+    zd : integer;
+
+    highestPositiveIndex : integer;
+
+begin
+
+// initialise the parish variables
+
+    parishes[1] := 'St.Patrick';
+    parishes[2] := 'St.Andrew';
+    parishes[3] := 'St.George';
+    parishes[4] := 'St.John';
+    parishes[5] := 'St.Mark';
+    parishes[6] := 'St.David';
+    parishes[7] := 'Carriacou';
+
+    writeln('Hello, This program is created by Delona and Zoye');
+    readln;
+    writeln('This program will be used to find out highest number of vaccinated person in Grenada');
+    readln;
+
+    for zd := 1 to 7 do begin
+    	write('Enter the Parish: ');
+   	    readln(parishes[zd]);
+        write('Enter the Number of Vaccinated Persons');
+	    readln(vaccinated[zd]);
+	    write('Enter the Number of Unvaccinated Persons');
+	    readln(unvaccinated[zd]);
+	    write('Enter the Number of Positive Cases');
+	    readln(positive_case[zd]);
+	    
+     end;
+
+     total_vaccinated := 0;
+     total_unvaccinated := 0;
+     total_positive_cases := 0;
+
+     for zd := 1 to 7 do begin
+	total_vaccinated := total_vaccinated + vaccinated[zd];
+	total_unvaccinated := total_unvaccinated + unvaccinated[zd];
+	total_positive_cases := total_positive_cases + positive_case[zd];
+    end;
+
+
+    writeln('Thank you for submitting the data required!');
+    readln;
+    writeln('The program is now going to display the following info.');
+    readln;
+    writeln('The Total Number Of Vaccinated Persons are:', total_vaccinated);
+    readln;
+    
+    //the program will now calculate and display the parish with the highest number of cases
+
+    highestPositiveIndex :=1;
+
+    for zd :=2 to 7 do
+ 
+    if positive_case[zd] > positive_case[highestPositiveIndex] then
+    highestPositiveIndex := zd;
+
+   writeln('The parish with the Highest Number of Positive Cases:', parishes[highestpositiveIndex]);
+
+end.
+
+
+
+
+
+
+
+
+
+
