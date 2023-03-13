@@ -1,0 +1,193 @@
+program parish_vote_kemuel_kayshorn_Daverelle;
+
+var
+
+    parishes : array [1..7] of string;
+    vaccinated : array [1..7] of integer;
+    unvaccinated : array [1..7] of integer;
+    positive_case : array [1..7] of integer;
+    total_vaccinated : integer;
+    total_unvaccinated : integer;
+    total_positive_cases : integer;
+    kkd : integer;
+    highest_Positive_Index : integer; 
+
+begin
+    // initialise the parish variables
+
+    parishes[1] := 'St.George';
+    parishes[2] := 'St.David';
+    parishes[3] := 'St.Patrick';
+    parishes[4] := 'St.John';
+    parishes[5] := 'St.Andrew';
+    parishes[6] := 'Carriacou';
+    parishes[7] := 'St.Mark';
+
+    writeln(' Hello,This program is created by kemuel,daverelle_and_kayshorn');
+    readln;
+    writeln('This program will be used to find out the highest number of vaccinated persons in grenada');
+
+    readln;
+
+    for kkd := 1 to 7  do begin
+        // Input the corresponding data for each parish
+
+        write('can you please enter the name of the parish: ');
+        readln(parishes[kkd]);
+
+        write('can you enter the number of vaccinated persons: ');
+        readln(vaccinated[kkd]);
+
+        write('can you please state the amount of unvaccinated persons here: '); 
+        readln(unvaccinated[kkd]);
+
+        write('can you please give the number of positive case available: ');
+        readln(positive_case[kkd]);
+
+    end;
+    
+    total_vaccinated := 0;
+    total_unvaccinated := 0;
+    total_positive_cases := 0;
+
+    for kkd := 1 to 7 do begin
+        total_vaccinated := total_vaccinated + vaccinated[kkd];
+        total_unvaccinated := total_unvaccinated + unvaccinated[kkd];
+        total_positive_cases := total_positive_cases + positive_case[kkd];
+    end;
+
+    writeln('Thank You For Entering Data Needed!');
+    readln;
+    writeln('The program is going to display following information!');
+    readln;
+
+    writeln('The Total Vaccinated Persons are ', total_vaccinated);
+    readln;
+    writeln('The Total Unvaccinated Persons are: ', total_unvaccinated);
+    readln;
+    writeln('The Total Positive Cases are: ', total_positive_cases);
+    readln; 
+
+end.
+
+writeln (Thank for entering the information above');
+writeln ('the program will now display the following information');
+readln;
+writeln(The total number of Vaccinated persons are: ', total_vacccinated);
+readln;
+// the program will now calculate and  display the parish with the highest number of cases 
+
+highestpositiveIndex := 1;
+
+for oe := 2 to 7 
+
+if positive_cases [oe] > positive_cases[HighestpppositiveIndex] then highestpositiveIndex := oe;
+
+writeln('The parish with the highest number of positive cases:',
+parishes[highestpositiveIndex]);
+
+end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+writeln (Thank for entering the information above');
+writeln ('the program will now display the following information');
+readln;
+writeln(The total number of Vaccinated persons are: ', total_vacccinated);
+readln;
+// the program will now calculate and  display the parish with the highest number of cases 
+
+highestpositiveIndex := 1;
+
+for oe := 2 to 7 
+
+if positive_cases [oe] > positive_cases[HighestpppositiveIndex] then highestpositiveIndex := oe;
+
+writeln('The parish with the highest number of positive cases:',
+parishes[highestpositiveIndex]);
+
+end.
+
+
+
